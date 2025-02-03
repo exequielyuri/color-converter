@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='icon' href='./img/favicons/favicon-16x16.png' sizes='16x16' type='image/x-icon'>
+  <link rel='icon' href='./img/favicons/favicon-32x32.png' sizes='32x32' type='image/x-icon'>
+  <link rel='apple-touch-icon' href='./img/favicons/apple-touch-icon.png' sizes='180x180'>
+  <link rel='icon' href='./img/favicons/android-chrome-192x192.png' sizes='192x192'>
+  <link href='https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css' rel='stylesheet' type='text/css' />
+  <script src='https://cdn.tailwindcss.com'></script>
+  <title>HexColor</title>
+</head>
+
+<body class='min-h-screen flex items-center justify-center bg-[url("./img/colors_bg.jpg")] bg-cover bg-center'>
+  <div
+    class='w-100 pt-8 px-10 pb-10 flex flex-col rounded-2xl bg-white/40 backdrop-blur-md gap-9 sm:flex-row sm:gap-12 sm:p-12'>
+    <div class='flex flex-col gap-4 sm:gap-6'>
+      <div class='flex flex-col gap-1'>
+        <div class='text-sm text-stone-600 sm:text-2xl'>Color name</div>
+        <label class='input input-bordered border-stone-100 flex items-center gap-2 shadow-sm bg-white/50'>
+          <input id='input' type='text' class='grow text-stone-600 text-md sm:text-xl' placeholder='e.g. Red' />
+          <svg id='search' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'
+            class='h-4 w-4 opacity-50 text-stone-600 duration-150 sm:h-6 sm:w-6 sm:text-stone-500'>
+            <path fill-rule='evenodd'
+              d='M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z'
+              clip-rule='evenodd' />
+          </svg>
+        </label>
+      </div>
+      <div class='flex flex-col gap-1'>
+        <span class='text-sm text-stone-600 sm:text-2xl'>Hex code</span>
+        <div id='result'
+          class='h-12 pl-4 py-2 pr-3 border border-stone-100 rounded-lg flex items-center justify-between cursor-pointer sm:pr-4'>
+          <span id='result-text' class='text-stone-600 text-md sm:text-xl'>#</span>
+          <button id='copy' class='btn btn-ghost btn-square btn-xs text-stone-500'>
+            <svg id='copy-icon' class='h-4 w-4 opacity-50 text-stone-600 duration-150 sm:h-6 sm:w-6 sm:text-stone-500'
+              xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor'
+              class='size-4'>
+              <path stroke-linecap='round' stroke-linejoin='round'
+                d='M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184' />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id='preview'
+      class='border border-stone-100 h-24 rounded-xl flex items-center justify-center text-white bg-white/50 duration-200 ease-out sm:h-48 sm:aspect-square'>
+      Enter a color
+    </div>
+  </div>
+
+  <script type='module' src='./src/index.js'></script>
+</body>
+
+</html>
