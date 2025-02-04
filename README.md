@@ -10,7 +10,7 @@ chmod u+x ./hexcolor.sh
 ```
 
 ## Web
-You can also use it in the browser via this [link]().
+You can also use it in the browser via this [link](https://exequielyuri.github.io/color-converter/web/).
 |          |             |
 | :---:    |    :----:   |
 | ![desktop](./mockups/desktop.png) | ![mobile](./mockups/mobile.png) |
