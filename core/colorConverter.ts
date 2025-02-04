@@ -1,7 +1,7 @@
 const colors: { [name: string]: string } = require('../data/nameToHex.json');
 
 export const colorToHex = (color: string): string | undefined => {
-  return colors[color.toLowerCase()];
+  return colors[color.trim().toLowerCase()];
 };
 
 if (require.main === module) {

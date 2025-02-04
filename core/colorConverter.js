@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.colorToHex = void 0;
 var colors = require('../data/nameToHex.json');
 var colorToHex = function (color) {
-    return colors[color.toLowerCase()];
+    return colors[color.trim().toLowerCase()];
 };
 exports.colorToHex = colorToHex;
 if (require.main === module) {
